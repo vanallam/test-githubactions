@@ -8,7 +8,6 @@ permissions:
 
 jobs:
  asses-issues:
-  name: Welcome and label
   runs-on: ubuntu-latest
   steps:
    - name: Add thank you comment
