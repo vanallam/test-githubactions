@@ -2,6 +2,7 @@ name: Welcome to my GitHub repo
 on:
    issues:
     types: [opened]
+    
 permissions:
  issues: write
  contents: read
@@ -10,9 +11,8 @@ jobs:
  asses-issues:
   runs-on: ubuntu-latest
   steps:
-   - name: Add thank you comment
-     uses: actions/github-script@v7
-     with:
+    - uses: actions/github-script@v7
+      with:
           script: |
             github.rest.issues.create comment({
               issue_number: context. issue.number,
